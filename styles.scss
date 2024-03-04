@@ -1,0 +1,211 @@
+$primarySoftBlue: hsl(215, 51%, 70%);
+$primaryCyan: hsl(178, 100%, 50%);
+$veryDarkBlueLine: hsl(215, 32%, 27%);
+$veryDarkBlueCardBG: hsl(216, 50%, 16%);
+$veryDarkBlueMainBG: hsl(217, 54%, 11%);
+$mainFont: "Outfit";
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $veryDarkBlueMainBG;
+    height: 100vh;
+    font-family: $mainFont, sans-serif;
+
+    main {
+        width: 327px;
+        height: 543px;
+        background-color: $veryDarkBlueCardBG;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        padding: 2rem 1.7rem;
+        border-radius: 1rem;
+
+
+        button {
+            display: block;
+            position: relative;
+            width: 278px;
+            height: 278px;
+            background-color: $veryDarkBlueCardBG;
+            border: none;
+            
+
+            .card-image {
+                display: block;
+                max-width: 100%;
+                height: 278px;
+                border-radius: 0.5rem;
+            }
+        }
+
+        h1 {
+            font-size: 1.375rem;
+            color: white;
+            margin-bottom: -0.3rem;
+        }
+
+        .body-text {
+            font-size: 1.125rem;
+            color: $primarySoftBlue;
+            font-weight: 200;
+        }
+
+        article {
+            border-bottom: 1px solid $veryDarkBlueLine;
+            width: 279px;
+            margin-bottom: -1rem;
+
+            p {
+                display: inline;
+                font-size: 0.938rem;
+                position: relative;
+                bottom: 0.2rem;
+            }
+
+            .eth-text {
+                color: $primaryCyan;
+            }
+
+            .time-text {
+                position: relative;
+                left: 6.8rem;
+                color: $primarySoftBlue;
+            }
+
+            .time-icon {
+                position: relative;
+                left: 6.8rem;
+            }
+        }
+
+        .avatar{
+            width: 33px;
+            height: 33px;
+            position: relative;
+            top: 2.5rem;
+            border: 1px solid white;
+            border-radius: 50% 50%;
+        }
+
+        .creator {
+
+            font-size: 0.938rem;
+            color: $primarySoftBlue;;
+            position: relative;
+            left: 3rem;
+            font-weight: 200;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        /*-----Hover-------*/
+            a:hover {
+                cursor: pointer;
+                color: $primaryCyan;
+            }
+        }
+/* -----------Hover state ------------*/
+
+        button::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background-color: $primaryCyan;
+            right: .1rem;
+            opacity: 0;
+        }
+
+
+        button::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background-image: url("/Users/ayua/Downloads/nft-preview-card-component-main/images/icon-view.svg");
+            background-repeat: no-repeat;
+            right: -8rem;
+            top: 8.5rem;
+            opacity: 0;
+            
+        }
+
+        button:hover::before {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        button:hover::after {
+            opacity: 1;
+            cursor: pointer;
+        }
+               
+        
+
+        h1:hover {
+            cursor: pointer;
+            color: $primaryCyan;
+        }
+
+/*---------- end of Hover____________*/
+        
+    }
+
+    @media screen and (min-width: 1400px) {
+
+        main {
+
+            width: 350px;
+            height: 596px;
+            padding: 1rem 1.5rem;
+            margin-top: 5rem;
+
+            button {
+                
+                width: 302px;
+                height: 302px;
+    
+                .card-image {
+                    display: block;
+                    max-width: 100%;
+                    height: 302px;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            .body-text {
+                line-height: 1.8rem;
+            }
+
+            article {
+
+                width: 302px;
+
+                .time-text {
+                    position: relative;
+                    left: 8rem;
+                }
+    
+                .time-icon {
+                    position: relative;
+                    left: 8rem;
+                }
+
+            }
+            
+        }
+        
+    }
+
+    
+
+    
+}
